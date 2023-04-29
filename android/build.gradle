@@ -1,14 +1,14 @@
 group 'ru.yoomoney.sdk.kassa.payments.flutter'
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.7.22'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'com.android.tools.build:gradle:8.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -24,7 +24,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -41,12 +41,6 @@ android {
 
     defaultConfig {
         minSdkVersion 21
-    }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.debug
-        }
     }
 }
 
